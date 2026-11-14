@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jade Lam | Brand Design & Storytelling | Prophet Portfolio</title>
+<meta name="description" content="Selected brand design and storytelling work by Jade Lam: Eggy, Gutter and Glimmera. Portfolio for the Prophet London Design Intern application.">
+<meta name="theme-color" content="#513328">
+<style>
+:root{color-scheme:dark;--bg:#251b1a;--surface:#3a2b2a;--ink:#f4e8e3;--pink:#e5b5b2}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+body{display:flex;flex-direction:column;min-height:100dvh}
+header{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:13px clamp(13px,3vw,42px);border-bottom:1px solid #ffffff20}
+.brand{font-weight:700;letter-spacing:.045em;font-size:.88rem}.muted{color:#ddc3bb;font-size:.8rem}.header-actions{display:flex;gap:.65rem;align-items:center}
+button,.navlink{background:var(--surface);border:1px solid #ffffff36;border-radius:100px;padding:.6rem .9rem;color:var(--ink);font-size:.82rem;text-decoration:none;cursor:pointer}
+button:hover,.navlink:hover{border-color:var(--pink);background:#513b39}button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:clamp(10px,2.2vw,25px);min-height:0}
+.viewport{width:min(100%,calc((100dvh - 142px)*16/9),1600px);position:relative;aspect-ratio:16/9;overflow:hidden;background:#e5b5b2;box-shadow:0 12px 60px #0006}
+.slide{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:fill;user-select:none;pointer-events:none}
+.layer{position:absolute;inset:0}.motion{position:absolute;object-fit:fill;display:block;z-index:2}.hotspot{position:absolute;z-index:3;display:block;border-radius:3px}.hotspot:hover{outline:2px solid #e5b5b2a0;outline-offset:1px}
+footer{display:flex;justify-content:center;align-items:center;gap:.75rem;padding:9px 15px 15px;flex-wrap:wrap}
+.counter{font-variant-numeric:tabular-nums;min-width:78px;text-align:center;font-size:.83rem}.project{padding:.54rem .7rem;font-size:.78rem}
+.project[aria-current="page"]{background:#765854;border-color:#dca49e}
+.help{font-size:.75rem;color:#c6a9a0;text-align:center;margin:0 0 9px}
+@media(max-width:650px){header{padding:9px 12px}.muted{display:none}.header-actions .navlink{display:none}main{padding:8px}.viewport{width:100%}footer{gap:.35rem}footer button{padding:.5rem .65rem}.project{font-size:.69rem}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head>
+<body>
+<header><div><div class="brand">JADE LAM <span style="font-weight:400;color:#d8bcb1">/ SELECTED WORK</span></div><div class="muted">Brand Design & Storytelling · Prophet 2026</div></div><div class="header-actions"><a class="navlink" href="mailto:lxmngch.studio@gmail.com">Contact</a><button id="fullscreen" title="View full screen">⛶ Fullscreen</button></div></header>
+<main><div class="viewport" id="viewport" aria-label="Portfolio slide viewer"><img id="slide" class="slide" alt="Portfolio slide"><div class="layer" id="layer"></div></div></main>
+<footer><button id="prev" aria-label="Previous slide">← Previous</button><span class="counter" id="counter" aria-live="polite">01 / 13</span><button id="next" aria-label="Next slide">Next →</button><button class="project" data-goto="0">Cover</button><button class="project" data-goto="3">Eggy</button><button class="project" data-goto="6">Gutter</button><button class="project" data-goto="11">Glimmera</button></footer>
+<p class="help">Use ← → keys or swipe to navigate. Original animated prototypes play automatically on slide 9.</p>
+<script>
+const slides=["assets/slide-01.png", "assets/slide-02.png", "assets/slide-03.png", "assets/slide-04.png", "assets/slide-05.png", "assets/slide-06.png", "assets/slide-07.png", "assets/slide-08.png", "assets/slide-09.png", "assets/slide-10.png", "assets/slide-11.png", "assets/slide-12.png", "assets/slide-13.png", "assets/slide-14.png", "assets/slide-15.png"];
+const overlays=[{"slide": 8, "src": "assets/animation-1.gif", "x": 5.4, "y": 15.46051, "w": 28.25, "h": 37.66667}, {"slide": 8, "src": "assets/animation-2.gif", "x": 52.65124, "y": 14.83344, "w": 38.47377, "h": 38.47377}];
+const hotspots={"0": [{"x": 92.875, "y": 9.9556, "w": 3.975, "h": 1.5556, "href": "https://www.instagram.com/d.archivol/", "label": "Open Instagram"}, {"x": 83.625, "y": 13.6889, "w": 14.075, "h": 6.0889, "href": "mailto:lxmngch.studio@gmail.com", "label": "Open Email"}, {"x": 84.425, "y": 14.8889, "w": 7.0, "h": 1.7333, "href": "mailto:lxmngch.studio@gmail.com", "label": "Open Email"}, {"x": 92.325, "y": 14.8889, "w": 4.75, "h": 1.7333, "href": "mailto:lxmngch.studio@gmail.com", "label": "Open Email"}], "2": [{"x": 5.2, "y": 53.3, "w": 60, "h": 7.4, "slide": 3, "label": "Eggy project"}, {"x": 5.2, "y": 61.0, "w": 60, "h": 7.1, "slide": 6, "label": "Gutter project"}, {"x": 5.2, "y": 68.2, "w": 69, "h": 7.1, "slide": 11, "label": "Glimmera project"}], "14": [{"x": 38.175, "y": 49.7333, "w": 16.85, "h": 2.2667, "href": "mailto:lxmngch.studio@gmail.com", "label": "Open Email"}, {"x": 45.375, "y": 52.3111, "w": 7.125, "h": 2.1333, "href": "https://www.instagram.com/d.archivol/", "label": "Open Instagram"}]};
+let current=0;
+const image=document.getElementById('slide'),layer=document.getElementById('layer'),counter=document.getElementById('counter');
+function clamp(i){return Math.max(0,Math.min(slides.length-1,i))}
+function show(i,updateHash=true){
+ current=clamp(i); image.src=slides[current]; image.alt=`Portfolio page ${current+1} of ${slides.length}`;
+ layer.replaceChildren();
+ overlays.filter(o=>o.slide===current).forEach(o=>{let im=document.createElement('img');im.className='motion';im.src=o.src;im.alt='Animated prototype process';im.style.cssText=`left:${o.x}%;top:${o.y}%;width:${o.w}%;height:${o.h}%`;layer.appendChild(im)});
+ (hotspots[current]||[]).forEach(o=>{let a=document.createElement('a');a.className='hotspot';a.setAttribute('aria-label',o.label);a.style.cssText=`left:${o.x}%;top:${o.y}%;width:${o.w}%;height:${o.h}%`;if(o.href){a.href=o.href;if(o.href.startsWith('http')){a.target='_blank';a.rel='noopener noreferrer'}}else{a.href='#slide-'+(o.slide+1);a.addEventListener('click',e=>{e.preventDefault();show(o.slide)})}layer.appendChild(a)});
+ counter.textContent=String(current+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
+ document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===slides.length-1;
+ for(const b of document.querySelectorAll('[data-goto]')){const v=+b.dataset.goto;b.setAttribute('aria-current',current===v?'page':'false')}
+ if(updateHash)history.replaceState(null,'','#slide-'+(current+1));
+ const next=slides[current+1];if(next){const preload=new Image();preload.src=next}
+}
+document.getElementById('prev').onclick=()=>show(current-1);
+document.getElementById('next').onclick=()=>show(current+1);
+for(const b of document.querySelectorAll('[data-goto]'))b.onclick=()=>show(+b.dataset.goto);
+window.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='PageDown'){e.preventDefault();show(current+1)}if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();show(current-1)}if(e.key==='Home')show(0);if(e.key==='End')show(slides.length-1)});
+document.getElementById('fullscreen').onclick=()=>{const el=document.getElementById('viewport');if(document.fullscreenElement)document.exitFullscreen();else if(el.requestFullscreen)el.requestFullscreen()};
+let start=null;const vp=document.getElementById('viewport');vp.addEventListener('touchstart',e=>{start=e.touches[0].clientX},{passive:true});vp.addEventListener('touchend',e=>{if(start==null)return;const dx=e.changedTouches[0].clientX-start;if(Math.abs(dx)>45)show(current+(dx<0?1:-1));start=null},{passive:true});
+window.addEventListener('hashchange',()=>{let m=location.hash.match(/^#slide-(\d+)$/);if(m)show(+m[1]-1,false)});
+let m=location.hash.match(/^#slide-(\d+)$/);show(m?+m[1]-1:0,false);
+</script></body></html>

@@ -1,0 +1,5 @@
+Latest supplied PDF: JadeLam_Prophet_DesignIntern_Portfolio_2026(1).pdf (15 pages)
+Original PPTX: JadeLam_Prophet_Design_Intern_Portfolio_2026.pptx (16 slides)
+Source PPTX slide 10 maps to final PDF page 9.
+Page 9: assets/animation-1.gif; 9 frames; 5400 ms
+Page 9: assets/animation-2.gif; 8 frames; 2400 ms
